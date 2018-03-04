@@ -20,7 +20,7 @@ public class Api {
 
 	@Autowired
 	@Qualifier("docsC")
-    DocumentClient documentClient;
+    private DocumentClient documentClient;
 	
 	private List<Account> accounts;
 
