@@ -2,8 +2,8 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
-		<groupId>pl.piomin</groupId>
-		<artifactId>sample-spring-microservices</artifactId>
+		<groupId>hc.micro</groupId>
+		<artifactId>springCloud-microservices</artifactId>
 		<version>1.0-SNAPSHOT</version>
 	</parent>
 	<artifactId>zipkin-service</artifactId>
