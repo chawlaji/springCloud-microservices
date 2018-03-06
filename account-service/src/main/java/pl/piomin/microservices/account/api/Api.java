@@ -6,7 +6,6 @@ import java.util.logging.Logger;
 import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -19,7 +18,6 @@ import pl.piomin.microservices.account.model.Document;
 public class Api {
 
 	@Autowired
-	@Qualifier("docsC")
     private DocumentClient documentClient;
 	
 	private List<Account> accounts;
