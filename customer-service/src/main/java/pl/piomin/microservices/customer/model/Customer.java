@@ -5,7 +5,6 @@ import java.util.List;
 public class Customer {
 
 	private Integer id;
-	private String pesel;
 	private String name;
 	private CustomerType type;
 	private List<Account> accounts;
@@ -14,9 +13,8 @@ public class Customer {
 		
 	}
 	
-	public Customer(Integer id, String pesel, String name, CustomerType type) {
+	public Customer(Integer id, String name, CustomerType type) {
 		this.id = id;
-		this.pesel = pesel;
 		this.name = name;
 		this.type = type;
 	}
@@ -27,14 +25,6 @@ public class Customer {
 
 	public void setId(Integer id) {
 		this.id = id;
-	}
-
-	public String getPesel() {
-		return pesel;
-	}
-
-	public void setPesel(String pesel) {
-		this.pesel = pesel;
 	}
 
 	public String getName() {

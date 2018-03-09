@@ -19,8 +19,8 @@ zuul:
       path: /customer/**
       serviceId: customer-service
     documents: 
-      path: /documents/**
-      serviceId: customer-service            
+      path: /document/**
+      serviceId: documents-service            
 
 ribbon:
   eureka:

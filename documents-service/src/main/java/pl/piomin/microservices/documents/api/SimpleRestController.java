@@ -10,11 +10,11 @@ import org.springframework.web.bind.annotation.RestController;
 /**
  * Created by oneclicklabs.io
  */
-@RestController
-@RequestMapping("/<add your restful service class name here>")
+/*@RestController
+@RequestMapping("/<add your restful service class name here>")*/
 public class SimpleRestController {
 
-	// Logger instance
+	/*// Logger instance
 	private static final Logger logger = Logger.getLogger(SimpleRestController.class);
 
 	@RequestMapping(value = "/<add method name here>", method = RequestMethod.GET)
@@ -145,5 +145,5 @@ public class SimpleRestController {
 			logger.debug("result: '" + response + "'");
 			logger.debug("End putSomething");
 		}
-	}
+	}*/
 }

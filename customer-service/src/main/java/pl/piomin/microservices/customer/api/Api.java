@@ -26,16 +26,16 @@ public class Api {
 	
 	public Api() {
 		customers = new ArrayList<>();
-		customers.add(new Customer(1, "12345", "Adam Kowalski", CustomerType.INDIVIDUAL));
-		customers.add(new Customer(2, "12346", "Anna Malinowska", CustomerType.INDIVIDUAL));
-		customers.add(new Customer(3, "12347", "Paweł Michalski", CustomerType.INDIVIDUAL));
-		customers.add(new Customer(4, "12348", "Karolina Lewandowska", CustomerType.INDIVIDUAL));
+		customers.add(new Customer(1, "Adam Kowalski", CustomerType.INDIVIDUAL));
+		customers.add(new Customer(2, "Anna Malinowska", CustomerType.INDIVIDUAL));
+		customers.add(new Customer(3, "Paweł Michalski", CustomerType.INDIVIDUAL));
+		customers.add(new Customer(4, "Karolina Lewandowska", CustomerType.INDIVIDUAL));
 	}
 	
-	@RequestMapping("/customers/pesel/{pesel}")
-	public Customer findByPesel(@PathVariable("pesel") String pesel) {
-		logger.info(String.format("Customer.findByPesel(%s)", pesel));
-		return customers.stream().filter(it -> it.getPesel().equals(pesel)).findFirst().get();	
+	@RequestMapping("/customers/name/{name}")
+	public Customer findByPesel(@PathVariable("name") String name) {
+		logger.info(String.format("Customer.findByPesel(%s)", name));
+		return customers.stream().filter(it -> it.getName().equals(name)).findAny().get();	
 	}
 	
 	@RequestMapping("/customers")
@@ -50,6 +50,7 @@ public class Api {
 		Customer customer = customers.stream().filter(it -> it.getId().intValue()==id.intValue()).findFirst().get();
 		List<Account> accounts =  accountClient.getAccounts(id);
 		customer.setAccounts(accounts);
+		
 		return customer;
 	}
 	

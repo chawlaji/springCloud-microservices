@@ -12,7 +12,7 @@ import pl.piomin.microservices.account.model.Document;
 @FeignClient("documents-service")
 public interface DocumentClient {
 
-    @RequestMapping(method = RequestMethod.GET, value = "/documents/account/{accountId}")
+    @RequestMapping(method = RequestMethod.GET, value = "/document/account/{accountId}")
 	List<Document> getDocuments(@PathVariable("accountId") int accountId);
     
 }
