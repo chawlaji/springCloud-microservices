@@ -61,6 +61,13 @@ public class Api {
 	@RequestMapping("/accounts")
 	public List<Account> findAll() {
 		logger.info("Account.findAll()");
+		
+		List<Document> documents = documentClient.getDocuments();
+		for (Account cus : accounts) {
+			List<Document> account_documents = documents.stream().filter(acc -> acc.getAccountId().equals(cus.getId()))
+					.collect(Collectors.toList());
+			cus.setDocuments(account_documents);
+		}
 		return accounts;
 	}
 

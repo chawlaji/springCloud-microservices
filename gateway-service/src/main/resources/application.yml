@@ -1,3 +1,7 @@
+spring:
+  application:
+    name: gateway-server
+
 info:
   component: Edge Server
   
@@ -11,6 +15,7 @@ endpoints:
 
 zuul:
   prefix: /api
+  retryable: true
   routes:
     account: 
       path: /account/**
@@ -22,9 +27,7 @@ zuul:
       path: /document/**
       serviceId: documents-service            
 
-ribbon:
-  eureka:
-    enabled: true
+
 
 eureka:
   client:
@@ -39,3 +42,4 @@ logging:
   level:
     ROOT: INFO
     org.springframework.web: DEBUG
+    

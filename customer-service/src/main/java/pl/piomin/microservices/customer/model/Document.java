@@ -1,4 +1,4 @@
-package pl.piomin.microservices.account.model;
+package pl.piomin.microservices.customer.model;
 
 public class Document {
 
@@ -14,15 +14,22 @@ public class Document {
 		return documentId;
 	}
 
-	public void setDocumentId(Integer documentId) {
+	public Document(int documentId, int accountId, String documentName) {
+		super();
+		this.documentId = documentId;
+		this.accountId = accountId;
+		this.documentName = documentName;
+	}
+
+	public void setDocumentId(int documentId) {
 		this.documentId = documentId;
 	}
 
-	public Integer getAccountId() {
+	public int getAccountId() {
 		return accountId;
 	}
 
-	public void setAccountId(Integer accountId) {
+	public void setAccountId(int accountId) {
 		this.accountId = accountId;
 	}
 
@@ -34,14 +41,6 @@ public class Document {
 		this.documentName = documentName;
 	}
 
-	public Document(Integer documentId, Integer accountId, String documentName) {
-		super();
-		this.documentId = documentId;
-		this.accountId = accountId;
-		this.documentName = documentName;
-	}
-
-	
 	
 
 }

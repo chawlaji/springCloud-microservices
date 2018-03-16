@@ -1,5 +1,5 @@
 server:  
-  port: ${PORT:0}
+  port: ${PORT:3333}
 
 eureka:  
   client:
@@ -12,5 +12,10 @@ eureka:
 ribbon:
   eureka:
     enabled: true
-    
+
+
+spring:  
+  application:
+    name: customer-service
+
     
