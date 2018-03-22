@@ -16,9 +16,9 @@ to know more on microservices read:  http://microservices.io/
 
 ![Basic Microservice](https://tusharsharma118.github.io/Hosted-Images/MVC%20Basic.PNG)
 
-*Client sends in a request which is sent to the api gateway.
-*The Gateway may utilize a service discovery service to tell the port number of the named service to which the request points to.
-*The request is then forwarded to the specified service and the responce is generated from the service.
+* Client sends in a request which is sent to the api gateway.
+* The Gateway may utilize a service discovery service to tell the port number of the named service to which the request points to.
+* The request is then forwarded to the specified service and the responce is generated from the service.
 
 # Architecture of this project
 ***
@@ -48,7 +48,7 @@ to know more on microservices read:  http://microservices.io/
    Feign makes writing java http clients easy and simple. It is utilized for inter-process communication in the project.
    To read more on Feign go to: https://github.com/OpenFeign/feign 
 
-#Request Flow
+# Request Flow
 ***
   1. When we hit the url : 	http://localhost:8765/api/customer/customers
                             (after starting the required services)
