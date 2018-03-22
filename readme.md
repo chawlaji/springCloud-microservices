@@ -1,7 +1,7 @@
 ## Creating microservice using Spring Cloud, Eureka ,Zuul ,Zipkin ,Docker .
 
-#Microservices
-##--------------
+# Microservices
+***
 Microservices are small, autonomous services that work together.They use a distributed systems architecture.
 Microservices
 - tackles the complexity of building distributed systems.
@@ -11,7 +11,7 @@ Microservices
 
 to know more on microservices read:  http://microservices.io/
 
-#Architecture that common microservices use
+# Architecture that common microservices use
 ***
 
 ![Basic Microservice](https://tusharsharma118.github.io/Hosted-Images/MVC%20Basic.PNG)
@@ -20,10 +20,9 @@ to know more on microservices read:  http://microservices.io/
 *The Gateway may utilize a service discovery service to tell the port number of the named service to which the request points to.
 *The request is then forwarded to the specified service and the responce is generated from the service.
 
-#Architecture of this project
+# Architecture of this project
 ***
 ![Micsroservice in action](https://tusharsharma118.github.io/Hosted-Images/MSA-1.PNG)
-
 1. API Gateway- 
   *  Netflix Zuul acts as an API gateway
   *  When we have multiple instances of microservices registered on service discovery server, and  we need to hide our system complexity        to the outside world, we deploy a API gateway such as Netflix Zuul.
@@ -32,7 +31,8 @@ to know more on microservices read:  http://microservices.io/
   *  Zuul is an edge service that provides dynamic routing, monitoring, resiliency, security, and more. Please view the wiki for usage,        information, HOWTO, etc https://github.com/Netflix/zuul/wiki
   
   2. Discovery Service-
-    In order for a client to make a request to a service it must use a service-discovery mechanism. A key part of service discovery is       the service registry. The service registry is a database of available service instances. 
+  
+   In order for a client to make a request to a service it must use a service-discovery mechanism. A key part of service discovery is      the service registry. The service registry is a database of available service instances. 
 
    This project uses **Netflix Eureka** for service discovery:
    **Eureka is a REST (Representational State Transfer)** based service that is primarily used in the AWS cloud for locating services      for the purpose of load balancing and failover of middle-tier servers.
@@ -40,14 +40,14 @@ to know more on microservices read:  http://microservices.io/
 
   3. Ribbon Client-
   ***
-    Ribbon Load Balancer is integrated with Netflix OSS and is used for load balancing in the microservice architecture.
-    Ribbon is a client side IPC(Inter-Process-Communication) library that is battle-tested in cloud. 
-    
+   Ribbon Load Balancer is integrated with Netflix OSS and is used for load balancing in the microservice architecture.
+   Ribbon is a client side IPC(Inter-Process-Communication) library that is battle-tested in cloud. 
+
   4.FEIGN Client-
   ***
-    Feign makes writing java http clients easy and simple. It is utilized for inter-process communication in the project.
-    To read more on Feign go to: https://github.com/OpenFeign/feign 
-  
+   Feign makes writing java http clients easy and simple. It is utilized for inter-process communication in the project.
+   To read more on Feign go to: https://github.com/OpenFeign/feign 
+
 #Request Flow
 ***
   1. When we hit the url : 	http://localhost:8765/api/customer/customers
