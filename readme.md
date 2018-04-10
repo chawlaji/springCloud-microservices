@@ -22,7 +22,7 @@ to know more on microservices read:  http://microservices.io/
 
 # Architecture of this project
 ***
-![Micsroservice in action](https://tusharsharma118.github.io/Hosted-Images/MSA-1.PNG)
+![Micsroservice in action](https://tusharsharma118.github.io/Hosted-Images/MSA-Final.png)
 1. API Gateway- 
   *  Netflix Zuul acts as an API gateway
   *  When we have multiple instances of microservices registered on service discovery server, and  we need to hide our system complexity        to the outside world, we deploy a API gateway such as Netflix Zuul.
