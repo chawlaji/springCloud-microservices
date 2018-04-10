@@ -1,5 +1,3 @@
-## Creating microservice using Spring Cloud, Eureka ,Zuul ,Zipkin ,Docker .
-
 # Microservices
 ***
 Microservices are small, autonomous services that work together.They use a distributed systems architecture.
