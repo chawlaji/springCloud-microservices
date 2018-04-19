@@ -6,6 +6,8 @@ spring:
       discovery:
         enabled: true
         service-id: config-server
+      fail-fast: true
+      profile: dev
       
 eureka:  
   client:
