@@ -1,0 +1,16 @@
+eureka:  
+  client:
+    serviceUrl:
+      defaultZone: ${DISCOVERY_URL:http://localhost:8761}/eureka/
+  instance:
+    leaseRenewalIntervalInSeconds: 1
+    leaseExpirationDurationInSeconds: 2
+          
+spring:  
+  application:
+    name: documents-service
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        service-id: config-server
