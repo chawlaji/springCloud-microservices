@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: config-server  
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/Tusharsharma118/springCloud-microservices
+          search-paths: configs
+          ignore-local-ssh-settings: true
+ 
+ 
+eureka:  
+  client:
+    serviceUrl:
+      defaultZone: ${DISCOVERY_URL:http://localhost:8761}/eureka/
+
+  
+server:
+  port: 8100 
+      
